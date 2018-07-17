@@ -11,9 +11,6 @@ const Plantilla = new Schema ({
     mensaje: {
         type: String
     },
-    predeterminado: {
-        type: String
-    },
     variables:[] 
 });
 

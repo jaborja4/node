@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const Plantilla = require('../models/plantillaModelo');
+const Predeterminado = require('../models/predeterminadoModelo');
+
 
 router.get('/', async (req, res) => {
     const plantilla = await Plantilla.find((err, plantilla) => {
@@ -22,9 +24,9 @@ router.get('/:id', async (req, res) => {
 });
 
 router.put('/', async (req, res) => {
-    var jsonIn=req.body;
-    //if(jsonIn)
-    const plantilla = new Plantilla(req.body);
+    var jsonOut=req.body;
+   
+        const plantilla = new Plantilla(req.body);
     await plantilla.save(
         (err, plantilla) => {
             if (err) return res.status(500).send();

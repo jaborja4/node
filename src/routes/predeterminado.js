@@ -14,9 +14,9 @@ router.get('/', async (req, res) => {
 
 router.put('/', async (req, res) => {
     const predeterminado = new Predeterminado(req.body);
-    await predeter.save((err, predeter) => {
+    await predeterminado.save((err, predeterminado) => {
             if (err) return res.status(500).send();
-            if (!predeter) return res.status(400).send();
+            if (!predeterminado) return res.status(400).send();
             res.status(200).send();
         }
     );

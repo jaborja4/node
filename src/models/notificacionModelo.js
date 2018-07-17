@@ -5,22 +5,28 @@ const Notificacion = new Schema({
     cod_emisor: {
         type: String
     },
-    cod_curso: {
+    nombre_emisor: {
         type: String
     },
     cod_plantilla: {
         type: String
     },
-    cod_medio: {
+    cod_alumno: {
         type: String
     },
-    cod_alumno: {
+    mail_alumno: {
+        type: String
+    },
+    nombre_alumno: {
         type: String
     },
     estado: {
         type: String
     },
     mensaje: {
+        type: String
+    },
+    asunto: {
         type: String
     },
     fecha_entrega: {
